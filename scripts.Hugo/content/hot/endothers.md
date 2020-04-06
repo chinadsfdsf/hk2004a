@@ -24,9 +24,8 @@ categories:
 
 #
 
-{{< mydiv4o link="https://hk2004.chinadsf.org/"   text="hk2004   2020年4月的新聞  <<<=== <<<===">}}
-{{< mydiv4o link="https://hk2004a.chinadsf.org/"  text="hk2004a  2020年4月的新聞a">}}
-
+{{< mydiv4o link="https://hk2004.chinadsf.org/"   text="hk2004   2020年4月的新聞 ">}}
+{{< mydiv4o link="https://hk2004a.chinadsf.org/"  text="hk2004a  2020年4月的新聞a <<<=== <<<===">}}
 #
 
 {{< mydiv4o link="https://hk2005.chinadsf.org/"   text="hk2005   2020年5月的新聞">}}
