@@ -749,19 +749,31 @@
 
 </div>
 <p>
-<a href="/all.xspf"
-   style="background-color:Gray; color:black; font-size:120%; border:5px green dotted;"
-   rel="noopener noreferrer"
+
+<button 
+    type="button"
+    style="background-color:lightblue; color:red; font-size:112%; border:5px blue dotted;"
+    onclick="copypath2clipboard('music.xspf')"
+    onMouseOver="this.style.backgroundColor='lightpink'"
+    onMouseOut="this.style.backgroundColor='lightblue'"
+     title="复制 VLC 播放器使用的链接：单曲" 
     > 
-     V全部  
-</a>
+     单曲 
+</button>
+
  
-<a href="/all.m3u8"
-   style="background-color:Gray; color:red; font-size:120%; border:5px black dotted;"
-   rel="noopener noreferrer"
+
+<button 
+    type="button"
+    style="background-color:lightblue; color:black; font-size:112%; border:5px green dotted;"
+    onclick="copypath2clipboard('\/all.m3u8')"
+    onMouseOver="this.style.backgroundColor='lightpink'"
+    onMouseOut="this.style.backgroundColor='lightblue'"
+     title="复制 IPTV 播放器使用的链接：全部" 
     > 
-     M3U8  
-</a>
+     M2  
+</button>
+
 </p>
 
   <!-- partials/main.related.html -->
