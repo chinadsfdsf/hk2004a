@@ -914,8 +914,17 @@ memehongkong:梁振英點評匯豐唔派息邏輯可笑！任志剛妄議英倫�
     }
     startTime();
 })();
+    <!-- mytime12 end -->
+
+function copy2clipboard(text) {
+    if (!navigator.clipboard) {
+        fallbackCopyTextToClipboard(text);
+        return;
+    }
+    navigator.clipboard.writeText(text)
+}
+
 </script>
-    
 
 
   </body>

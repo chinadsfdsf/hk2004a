@@ -914,8 +914,17 @@ Citizen_Laohei公民老黑:趙家的狗瘋了······
     }
     startTime();
 })();
+    <!-- mytime12 end -->
+
+function copy2clipboard(text) {
+    if (!navigator.clipboard) {
+        fallbackCopyTextToClipboard(text);
+        return;
+    }
+    navigator.clipboard.writeText(text)
+}
+
 </script>
-    
 
 
   </body>

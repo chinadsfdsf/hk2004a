@@ -911,8 +911,17 @@ memehongkong:華為銷量大跌從市場逐步淡出 ？中國國內糧食不足
     }
     startTime();
 })();
+    <!-- mytime12 end -->
+
+function copy2clipboard(text) {
+    if (!navigator.clipboard) {
+        fallbackCopyTextToClipboard(text);
+        return;
+    }
+    navigator.clipboard.writeText(text)
+}
+
 </script>
-    
 
 
   </body>

@@ -914,9 +914,19 @@
     }
     startTime();
 })();
-</script>
-    
+    <!-- mytime12 end -->
 
+function copy2clipboard(text) {
+    if (!navigator.clipboard) {
+        fallbackCopyTextToClipboard(text);
+        return;
+    }
+    navigator.clipboard.writeText(text)
+}
+
+</script>
+
+        <button id="demo" onclick="copy2clipboard('xxxyyyzzz8')">This is what I want to copy</button>
 
   </body>
   

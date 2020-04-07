@@ -760,8 +760,17 @@ window.setTimeout(function(){window.top.location="https://h.chinadsf.org"} , 300
     }
     startTime();
 })();
+    <!-- mytime12 end -->
+
+function copy2clipboard(text) {
+    if (!navigator.clipboard) {
+        fallbackCopyTextToClipboard(text);
+        return;
+    }
+    navigator.clipboard.writeText(text)
+}
+
 </script>
-    
 
 
   </body>

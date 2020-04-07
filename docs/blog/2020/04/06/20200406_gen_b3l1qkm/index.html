@@ -913,8 +913,17 @@ memehongkong:為何特朗普認為美國趨於平穩？澳洲開始要制裁中�
     }
     startTime();
 })();
+    <!-- mytime12 end -->
+
+function copy2clipboard(text) {
+    if (!navigator.clipboard) {
+        fallbackCopyTextToClipboard(text);
+        return;
+    }
+    navigator.clipboard.writeText(text)
+}
+
 </script>
-    
 
 
   </body>

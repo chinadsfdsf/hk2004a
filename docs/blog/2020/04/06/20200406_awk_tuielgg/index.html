@@ -914,8 +914,17 @@ memehongkong:慘過韓劇睇前要準備紙巾！  讀韓愈《祭十二郎文�
     }
     startTime();
 })();
+    <!-- mytime12 end -->
+
+function copy2clipboard(text) {
+    if (!navigator.clipboard) {
+        fallbackCopyTextToClipboard(text);
+        return;
+    }
+    navigator.clipboard.writeText(text)
+}
+
 </script>
-    
 
 
   </body>
