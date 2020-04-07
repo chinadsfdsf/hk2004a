@@ -43,4 +43,4 @@ en="the origin source link" cn="原始來源網址"
 
 <br>
 
-{{< my2m3uexist "music.xspf"        "blue"   "red"    "xspf" >}} {{< my2m3uforce "/all.xspf"         "green"  "black"  " 全部 " >}} {{< my2m3uforce "/hot/helpxspf/"    "blue"   "red"    " 播放器 " >}} {{< my2m3uforce "/hot/endothers/"   "green"  "blue"   " 目录 " >}} 
+{{< my2m3uexist "music.xspf"        "blue"   "red"    " V单曲 " >}} {{< my2m3uforce "/all.xspf"         "green"  "black"  " V全部 " >}} {{< my2m3uforce "/hot/helpxspf/"    "blue"   "red"    " 播放器 " >}} {{< my2m3uforce "/hot/endothers/"   "green"  "blue"   " 目录 " >}} {{< my2m3uexist "music.m3u8"        "blue"   "red"    " M1 " >}} {{< my2m3uforce "/all.m3u8"         "green"  "black"  " M2 " >}} 
