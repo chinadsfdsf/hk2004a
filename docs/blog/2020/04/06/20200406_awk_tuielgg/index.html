@@ -711,47 +711,83 @@ memehongkong:慘過韓劇睇前要準備紙巾！  讀韓愈《祭十二郎文�
    >原始來源網址</a>
 <!-- raw HTML omitted -->
 <p>
-<a href="music.xspf"
-   style="background-color:Gray; color:red; font-size:120%; border:5px blue dotted;"
-   rel="noopener noreferrer"
+
+<button 
+    type="button"
+    style="background-color:lightblue; color:red; font-size:112%; border:5px blue dotted;"
+    onclick="copypath2clipboard('music.xspf')"
+    onMouseOver="this.style.backgroundColor='lightpink'"
+    onMouseOut="this.style.backgroundColor='lightblue'"
+     title="复制 VLC 播放器使用的链接：单曲" 
     > 
-    &nbsp;  V单曲  &nbsp; 
-</a>
+     单曲 
+</button>
+
  
-<a href="/all.xspf"
-   style="background-color:Gray; color:black; font-size:120%; border:5px green dotted;"
-   rel="noopener noreferrer"
+
+<button 
+    type="button"
+    style="background-color:lightblue; color:black; font-size:112%; border:5px green dotted;"
+    onclick="copypath2clipboard('\/all.xspf')"
+    onMouseOver="this.style.backgroundColor='lightpink'"
+    onMouseOut="this.style.backgroundColor='lightblue'"
+     title="复制 VLC 播放器使用的链接：全部" 
     > 
-     V全部  
-</a>
+     全部 
+</button>
+
  
-<a href="/hot/helpxspf/"
-   style="background-color:Gray; color:red; font-size:120%; border:5px blue dotted;"
-   rel="noopener noreferrer"
+
+<button 
+    type="button"
+    style="background-color:lightblue; color:red; font-size:112%; border:5px blue dotted;"
+    onclick="copypath2clipboard('\/hot\/helpxspf\/')"
+    onMouseOver="this.style.backgroundColor='lightpink'"
+    onMouseOut="this.style.backgroundColor='lightblue'"
+     title="如何使用 VLC 播放器或者 IPTV 播放器的教程" 
     > 
-     播放器  
-</a>
+     播放器 
+</button>
+
  
-<a href="/hot/endothers/"
-   style="background-color:Gray; color:blue; font-size:120%; border:5px green dotted;"
-   rel="noopener noreferrer"
+
+<button 
+    type="button"
+    style="background-color:lightblue; color:blue; font-size:112%; border:5px green dotted;"
+    onclick="copypath2clipboard('\/hot\/endothers\/')"
+    onMouseOver="this.style.backgroundColor='lightpink'"
+    onMouseOut="this.style.backgroundColor='lightblue'"
+     title="转到总目录" 
     > 
-     目录  
-</a>
+     目录 
+</button>
+
  
-<a href="music.m3u8"
-   style="background-color:Gray; color:red; font-size:120%; border:5px blue dotted;"
-   rel="noopener noreferrer"
+
+<button 
+    type="button"
+    style="background-color:darkgray; color:red; font-size:112%; border:5px blue dotted;"
+    onclick="gotopath4('music.m3u8')"
+    onMouseOver="this.style.backgroundColor='lightpink'"
+    onMouseOut="this.style.backgroundColor='darkgray'"
+     title="复制 IPTV 播放器使用的链接：单曲" 
     > 
-    &nbsp;  M1  &nbsp; 
-</a>
+     M1  
+</button>
+
  
-<a href="/all.m3u8"
-   style="background-color:Gray; color:black; font-size:120%; border:5px green dotted;"
-   rel="noopener noreferrer"
+
+<button 
+    type="button"
+    style="background-color:darkgray; color:black; font-size:112%; border:5px green dotted;"
+    onclick="gotopath4('\/all.m3u8')"
+    onMouseOver="this.style.backgroundColor='lightpink'"
+    onMouseOut="this.style.backgroundColor='darkgray'"
+     title="复制 IPTV 播放器使用的链接：全部" 
     > 
      M2  
-</a>
+</button>
+
 </p>
 
   <!-- partials/main.related.html -->
@@ -922,6 +958,15 @@ function copy2clipboard(text) {
         return;
     }
     navigator.clipboard.writeText(text)
+}
+function abspath2(path2) {
+    return new URL( path2 , window.location.href ).href;
+}
+function copypath2clipboard(text3) {
+    copy2clipboard( abspath2(text3) )
+}
+function gotopath4(goto4) {
+    window.setTimeout(function(){window.top.location=abspath2(goto4)} , 1000);
 }
 
 </script>

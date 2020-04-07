@@ -991,6 +991,15 @@ function copy2clipboard(text) {
     }
     navigator.clipboard.writeText(text)
 }
+function abspath2(path2) {
+    return new URL( path2 , window.location.href ).href;
+}
+function copypath2clipboard(text3) {
+    copy2clipboard( abspath2(text3) )
+}
+function gotopath4(goto4) {
+    window.setTimeout(function(){window.top.location=abspath2(goto4)} , 1000);
+}
 
 </script>
 
