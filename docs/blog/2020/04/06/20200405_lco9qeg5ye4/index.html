@@ -942,7 +942,13 @@ memehongkong:孟荀兩派性善性惡大辯論〈昔日精華重溫：蕭若元�
 
 function copy2clipboard(text) {
     if (!navigator.clipboard) {
-        fallbackCopyTextToClipboard(text);
+        var inputvar001 = document.createElement('textarea');
+        inputvar001.innerHTML = text;
+        document.body.appendChild(inputvar001);
+        inputvar001.select();
+        var result = document.execCommand('copy');
+        document.body.removeChild(inputvar001);
+
         return;
     }
     navigator.clipboard.writeText(text)

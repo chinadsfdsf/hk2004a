@@ -952,7 +952,13 @@ memehongkong:賞析英女王特別演說稿 在位僅五次發表 英國面臨�
 
 function copy2clipboard(text) {
     if (!navigator.clipboard) {
-        fallbackCopyTextToClipboard(text);
+        var inputvar001 = document.createElement('textarea');
+        inputvar001.innerHTML = text;
+        document.body.appendChild(inputvar001);
+        inputvar001.select();
+        var result = document.execCommand('copy');
+        document.body.removeChild(inputvar001);
+
         return;
     }
     navigator.clipboard.writeText(text)

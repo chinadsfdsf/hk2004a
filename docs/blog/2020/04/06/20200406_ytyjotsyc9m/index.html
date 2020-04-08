@@ -954,7 +954,13 @@ memehongkong:進諫遇佛殺佛冇面俾  韓愈《論佛骨表   諫迎佛骨�
 
 function copy2clipboard(text) {
     if (!navigator.clipboard) {
-        fallbackCopyTextToClipboard(text);
+        var inputvar001 = document.createElement('textarea');
+        inputvar001.innerHTML = text;
+        document.body.appendChild(inputvar001);
+        inputvar001.select();
+        var result = document.execCommand('copy');
+        document.body.removeChild(inputvar001);
+
         return;
     }
     navigator.clipboard.writeText(text)
