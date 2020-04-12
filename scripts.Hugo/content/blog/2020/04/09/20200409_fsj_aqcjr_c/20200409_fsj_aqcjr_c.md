@@ -27,6 +27,13 @@ categories:
 {{< my2mp4withjpgdownload mp4="20200409_fsj_aqcjr_c.m4a"
 >}}
 
+{{< my2mp4audiowithdownload mp4="20200409_fsj_aqcjr_c-001.m4a" text="1">}}
+{{< my2mp4audiowithdownload mp4="20200409_fsj_aqcjr_c-002.m4a" text="2">}}
+{{< my2mp4audiowithdownload mp4="20200409_fsj_aqcjr_c-003.m4a" text="3">}}
+{{< my2mp4audiowithdownload mp4="20200409_fsj_aqcjr_c-004.m4a" text="4">}}
+{{< my2mp4audiowithdownload mp4="20200409_fsj_aqcjr_c-005.m4a" text="5">}}
+{{< my2mp4audiowithdownload mp4="20200409_fsj_aqcjr_c-006.m4a" text="6">}}
+
 {{< my2jpgexist "xx1.jpg" >}}<br>
 {{< my2jpgexist "xx2.jpg" >}}<br>
 {{< my2jpgexist "xx3.jpg" >}}<br>

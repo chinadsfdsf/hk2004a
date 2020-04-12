@@ -27,6 +27,14 @@ categories:
 {{< my2mp4withjpgdownload mp4="20200407_nm_sbmwwujk.m4a"
 >}}
 
+{{< my2mp4audiowithdownload mp4="20200407_nm_sbmwwujk.m4a.wav.48kbps-001.mp4" text="1">}}
+{{< my2mp4audiowithdownload mp4="20200407_nm_sbmwwujk.m4a.wav.48kbps-002.mp4" text="2">}}
+{{< my2mp4audiowithdownload mp4="20200407_nm_sbmwwujk.m4a.wav.48kbps-003.mp4" text="3">}}
+{{< my2mp4audiowithdownload mp4="20200407_nm_sbmwwujk.m4a.wav.48kbps-004.mp4" text="4">}}
+{{< my2mp4audiowithdownload mp4="20200407_nm_sbmwwujk.m4a.wav.48kbps-005.mp4" text="5">}}
+{{< my2mp4audiowithdownload mp4="20200407_nm_sbmwwujk.m4a.wav.48kbps-006.mp4" text="6">}}
+{{< my2mp4audiowithdownload mp4="20200407_nm_sbmwwujk.m4a.wav.48kbps-007.mp4" text="7">}}
+
 {{< my2jpgexist "xx1.jpg" >}}<br>
 {{< my2jpgexist "xx2.jpg" >}}<br>
 {{< my2jpgexist "xx3.jpg" >}}<br>
