@@ -11,6 +11,7 @@ categories:
   - features
 ---
 
+{{< my2buildtime "buildtime 创建时间" >}}
 
 {{< mydiv4o link="https://hk01.chinadsf.org/"     text="hk01     2020年1月之前的新聞">}}
 {{< mydiv4o link="https://hk2001.chinadsf.org/"   text="hk2001   2020年1月的新聞">}}

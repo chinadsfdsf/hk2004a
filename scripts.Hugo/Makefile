@@ -134,13 +134,14 @@ regenTestVersion: regenBaseCheck
 	$(updateMakefile)
 
 
-rg:regen
-regen: regenBaseCheck
-	make m3u
-	make sed01
+rgp : regen_pure 
+regen_pure : regenBaseCheck
 	cd scripts.Hugo/ && nice -n 19 hugo       && hugo version
 	$(rmXML)
 	$(updateMakefile)
+
+rg:regen
+regen: m3u sed01 regen_pure
 
 s : server
 server:
