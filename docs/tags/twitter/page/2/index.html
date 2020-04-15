@@ -630,7 +630,7 @@
 
 
     <div class="w3-right"><i class="far fa-calendar" aria-hidden="true"></i>&nbsp;<i>12. Apr 2020</i></div>Jennifer Zeng 曾錚: “Wow, the previous &amp;quot;50-cent army&amp;quot; got a pay rise again. Now they are &amp;quot;80-cent army&amp;quot; 五毛又漲價了，八毛了。”<br>
-原始來源網址     单曲      全部      M1 …
+原始來源網址     单曲      全部      M3U …
 
   </div>
 </a>
@@ -711,7 +711,7 @@
 
 
     <div class="w3-right"><i class="far fa-calendar" aria-hidden="true"></i>&nbsp;<i>12. Apr 2020</i></div>号角: “感觉战争真要来临：因一名员工染疫死亡，波音公司3万人迅速停工在家防疫。仅仅五天，波音10日发布新闻稿，召回制造海军P-8反潜飞机和空军KC-46空中加油机厂区的2500名员工员工返厂工作，并提供足够的防护用品。”<br>
-原始來源網址     单曲      全部      M1      播放器      月份      列表
+原始來源網址     单曲      全部      M3U      本页      播放器      月份      列表
 
   </div>
 </a>
@@ -795,7 +795,7 @@
 
 
     <div class="w3-right"><i class="far fa-calendar" aria-hidden="true"></i>&nbsp;<i>11. Apr 2020</i></div>baiqiao tang 唐柏桥: “Beautiful! I love Hongkongers! 真美，我愛香港人！”<br>
-原始來源網址    单曲      全部      M1      播放器      月份      列表
+原始來源網址    单曲      全部      M3U      本页      播放器      月份      列表
 
   </div>
 </a>
@@ -1002,9 +1002,9 @@
 <a id="PPPdynTime02"></a>
 <script>
 (function () {
-    function startTime() {
+    function startTime001() {
         t = setTimeout(function () {
-            startTime()
+            startTime001()
         }, 59000);
 
         var dynTime00 = new Date();
@@ -1013,33 +1013,32 @@
         document.getElementById('PPPdynTime02').innerHTML = "_HK:" +
         dynTime00.toLocaleString("en-US", {timeZone: "Asia/Hong_Kong"});
     }
-    startTime();
+    startTime001();
 })();
-    <!-- mytime12 end -->
 
-function copy2clipboard(text) {
+function copy2clipboard(text02, warn02) {
     if (!navigator.clipboard) {
         var inputvar001 = document.createElement('textarea');
-        inputvar001.innerHTML = text;
+        inputvar001.innerHTML = text02;
         document.body.appendChild(inputvar001);
         inputvar001.select();
         var result = document.execCommand('copy');
         document.body.removeChild(inputvar001);
 
-        <!-- alert("I am an alert box!"); -->
-
-        return;
+        return ;
     }
-    navigator.clipboard.writeText(text)
+    navigator.clipboard.writeText(text02) ;
 }
-function abspath2(path2) {
-    return new URL( path2 , window.location.href ).href;
+function abspath2(path05) {
+    return new URL( path05 , window.location.href ).href;
 }
-function copypath2clipboard(text3) {
-    copy2clipboard( abspath2(text3) )
+function copypath2clipboard(text3,h03) {
+    var fullpath03 = abspath2(text3) ; 
+    var warn03 =  "以下内容已经复制到粘贴板 : \n" + fullpath03 + "\n" + h03;  
+    copy2clipboard( fullpath03 , warn03) ;
 }
-function gotopath4(goto4) {
-    window.setTimeout(function(){window.top.location=abspath2(goto4)} , 1000);
+function gotopath4(goto04) {
+    window.setTimeout(function(){window.top.location=abspath2(goto04)} , 1000);
 }
 
 </script>

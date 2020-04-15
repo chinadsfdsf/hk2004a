@@ -710,7 +710,7 @@
 
 
     <div class="w3-right"><i class="far fa-calendar" aria-hidden="true"></i>&nbsp;<i>11. Apr 2020</i></div>baiqiao tang 唐柏桥: “一个多世纪前，清廷慈禧主動對多國同時宣戰，史稱對萬國宣戰書。結果不到兩個星期慈禧跑路了，京城不到五個小時就被攻破。當時北京兵力15萬外加至少10多萬「刀槍不入」的義和團，八國聯軍只有不到5萬兵力。一年後簽署投降的辛丑條約，賠償各國共計4億千萬兩銀子，分39年還清，連本加利近10億兩。”<br>
-原始來源網址    单曲      全部      M1 …
+原始來源網址    单曲      全部      M3U …
 
   </div>
 </a>
@@ -754,7 +754,7 @@
 
 
     <div class="w3-right"><i class="far fa-calendar" aria-hidden="true"></i>&nbsp;<i>11. Apr 2020</i></div>😷陳芝麻😷: “@jenniferatntd”<br>
-原始來源網址    单曲      全部      M1      播放器      月份      列表
+原始來源網址    单曲      全部      M3U      本页      播放器      月份      列表
 
   </div>
 </a>
@@ -836,7 +836,7 @@
 
 
     <div class="w3-right"><i class="far fa-calendar" aria-hidden="true"></i>&nbsp;<i>11. Apr 2020</i></div>周育田: “此前接到國內消息，只能現在才爆：公安部出入境管理局下發內部文件；按省，直轄市，一，二，三縣市步驟，逐步收回公民因私個人護照，無法收回情況按取締處理，因公護照必須由省級外辦，省外徑委，國台辦，省公安聽，國安廳（局），國務院外事辦統一核准。註明：隱私護照被收回範圍幾乎涵蓋社會各層面。”<br>
-原始來源網址    单曲      全部      M1      播放器      月份      列 …
+原始來源網址    单曲      全部      M3U      本页      播放器       …
 
   </div>
 </a>
@@ -1000,9 +1000,9 @@
 <a id="PPPdynTime02"></a>
 <script>
 (function () {
-    function startTime() {
+    function startTime001() {
         t = setTimeout(function () {
-            startTime()
+            startTime001()
         }, 59000);
 
         var dynTime00 = new Date();
@@ -1011,33 +1011,32 @@
         document.getElementById('PPPdynTime02').innerHTML = "_HK:" +
         dynTime00.toLocaleString("en-US", {timeZone: "Asia/Hong_Kong"});
     }
-    startTime();
+    startTime001();
 })();
-    <!-- mytime12 end -->
 
-function copy2clipboard(text) {
+function copy2clipboard(text02, warn02) {
     if (!navigator.clipboard) {
         var inputvar001 = document.createElement('textarea');
-        inputvar001.innerHTML = text;
+        inputvar001.innerHTML = text02;
         document.body.appendChild(inputvar001);
         inputvar001.select();
         var result = document.execCommand('copy');
         document.body.removeChild(inputvar001);
 
-        <!-- alert("I am an alert box!"); -->
-
-        return;
+        return ;
     }
-    navigator.clipboard.writeText(text)
+    navigator.clipboard.writeText(text02) ;
 }
-function abspath2(path2) {
-    return new URL( path2 , window.location.href ).href;
+function abspath2(path05) {
+    return new URL( path05 , window.location.href ).href;
 }
-function copypath2clipboard(text3) {
-    copy2clipboard( abspath2(text3) )
+function copypath2clipboard(text3,h03) {
+    var fullpath03 = abspath2(text3) ; 
+    var warn03 =  "以下内容已经复制到粘贴板 : \n" + fullpath03 + "\n" + h03;  
+    copy2clipboard( fullpath03 , warn03) ;
 }
-function gotopath4(goto4) {
-    window.setTimeout(function(){window.top.location=abspath2(goto4)} , 1000);
+function gotopath4(goto04) {
+    window.setTimeout(function(){window.top.location=abspath2(goto04)} , 1000);
 }
 
 </script>

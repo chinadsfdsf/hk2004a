@@ -760,7 +760,7 @@
 
 
     <div class="w3-right"><i class="far fa-calendar" aria-hidden="true"></i>&nbsp;<i>7. Apr 2020</i></div>個人意見獨立思考:   YN03220200406_mblveictmnm.webm.m4a 下载视频 2139159 byte , 2.0 MiB 20200406_mblveictmnm.webm.m4a 下载 jpg  部分手机显示不正常， 请横屏播放，或全屏播放<br>
-個人意見獨立思考:中國信貸危機走佬潮👣2020_4_7   原始來源網址    单曲      全部      M1       …
+個人意見獨立思考:中國信貸危機走佬潮👣2020_4_7   原始來源網址    单曲      全部      M3U …
 
   </div>
 </a>
@@ -1009,9 +1009,9 @@
 <a id="PPPdynTime02"></a>
 <script>
 (function () {
-    function startTime() {
+    function startTime001() {
         t = setTimeout(function () {
-            startTime()
+            startTime001()
         }, 59000);
 
         var dynTime00 = new Date();
@@ -1020,33 +1020,32 @@
         document.getElementById('PPPdynTime02').innerHTML = "_HK:" +
         dynTime00.toLocaleString("en-US", {timeZone: "Asia/Hong_Kong"});
     }
-    startTime();
+    startTime001();
 })();
-    <!-- mytime12 end -->
 
-function copy2clipboard(text) {
+function copy2clipboard(text02, warn02) {
     if (!navigator.clipboard) {
         var inputvar001 = document.createElement('textarea');
-        inputvar001.innerHTML = text;
+        inputvar001.innerHTML = text02;
         document.body.appendChild(inputvar001);
         inputvar001.select();
         var result = document.execCommand('copy');
         document.body.removeChild(inputvar001);
 
-        <!-- alert("I am an alert box!"); -->
-
-        return;
+        return ;
     }
-    navigator.clipboard.writeText(text)
+    navigator.clipboard.writeText(text02) ;
 }
-function abspath2(path2) {
-    return new URL( path2 , window.location.href ).href;
+function abspath2(path05) {
+    return new URL( path05 , window.location.href ).href;
 }
-function copypath2clipboard(text3) {
-    copy2clipboard( abspath2(text3) )
+function copypath2clipboard(text3,h03) {
+    var fullpath03 = abspath2(text3) ; 
+    var warn03 =  "以下内容已经复制到粘贴板 : \n" + fullpath03 + "\n" + h03;  
+    copy2clipboard( fullpath03 , warn03) ;
 }
-function gotopath4(goto4) {
-    window.setTimeout(function(){window.top.location=abspath2(goto4)} , 1000);
+function gotopath4(goto04) {
+    window.setTimeout(function(){window.top.location=abspath2(goto04)} , 1000);
 }
 
 </script>

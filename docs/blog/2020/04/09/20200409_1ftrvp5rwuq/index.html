@@ -740,12 +740,12 @@ memehongkong:儒家思想的特質「禮」的重要性〈昔日精華重溫：�
 <button 
     type="button"
     style="background-color:lightblue; color:red; font-size:112%; border:5px blue dotted;"
-    onclick="copypath2clipboard('music.xspf')"
+    onclick="copypath2clipboard('music.xspf','复制 VLC 播放器使用的链接：单曲')"
     onMouseOver="this.style.backgroundColor='lightpink'"
     onMouseOut="this.style.backgroundColor='lightblue'"
      title="复制 VLC 播放器使用的链接：单曲" 
     > 
-     单曲 
+     单曲  
 </button> 
 &nbsp;
 
@@ -755,12 +755,12 @@ memehongkong:儒家思想的特質「禮」的重要性〈昔日精華重溫：�
 <button 
     type="button"
     style="background-color:lightblue; color:black; font-size:112%; border:5px green dotted;"
-    onclick="copypath2clipboard('\/all.xspf')"
+    onclick="copypath2clipboard('\/all.xspf','复制 VLC 播放器使用的链接：全部')"
     onMouseOver="this.style.backgroundColor='lightpink'"
     onMouseOut="this.style.backgroundColor='lightblue'"
      title="复制 VLC 播放器使用的链接：全部" 
     > 
-     全部 
+     全部  
 </button> 
 &nbsp;
 
@@ -770,12 +770,27 @@ memehongkong:儒家思想的特質「禮」的重要性〈昔日精華重溫：�
 <button 
     type="button"
     style="background-color:lightblue; color:red; font-size:112%; border:5px blue dotted;"
-    onclick="copypath2clipboard('music.m3u8')"
+    onclick="copypath2clipboard('music.m3u8','复制 M3U 播放器使用的链接：单曲')"
     onMouseOver="this.style.backgroundColor='lightpink'"
     onMouseOut="this.style.backgroundColor='lightblue'"
-     title="复制 IPTV 播放器使用的链接：单曲" 
+     title="复制 M3U 播放器使用的链接：单曲" 
     > 
-     M1  
+     M3U   
+</button> 
+&nbsp;
+
+ 
+
+&nbsp;
+<button 
+    type="button"
+    style="background-color:lightblue; color:black; font-size:112%; border:5px green dotted;"
+    onclick="copypath2clipboard('','复制 本页的网址 ')"
+    onMouseOver="this.style.backgroundColor='lightpink'"
+    onMouseOut="this.style.backgroundColor='lightblue'"
+     title="复制 本页的网址 " 
+    > 
+     本页  
 </button> 
 &nbsp;
 
@@ -985,9 +1000,9 @@ memehongkong:儒家思想的特質「禮」的重要性〈昔日精華重溫：�
 <a id="PPPdynTime02"></a>
 <script>
 (function () {
-    function startTime() {
+    function startTime001() {
         t = setTimeout(function () {
-            startTime()
+            startTime001()
         }, 59000);
 
         var dynTime00 = new Date();
@@ -996,33 +1011,32 @@ memehongkong:儒家思想的特質「禮」的重要性〈昔日精華重溫：�
         document.getElementById('PPPdynTime02').innerHTML = "_HK:" +
         dynTime00.toLocaleString("en-US", {timeZone: "Asia/Hong_Kong"});
     }
-    startTime();
+    startTime001();
 })();
-    <!-- mytime12 end -->
 
-function copy2clipboard(text) {
+function copy2clipboard(text02, warn02) {
     if (!navigator.clipboard) {
         var inputvar001 = document.createElement('textarea');
-        inputvar001.innerHTML = text;
+        inputvar001.innerHTML = text02;
         document.body.appendChild(inputvar001);
         inputvar001.select();
         var result = document.execCommand('copy');
         document.body.removeChild(inputvar001);
 
-        <!-- alert("I am an alert box!"); -->
-
-        return;
+        return ;
     }
-    navigator.clipboard.writeText(text)
+    navigator.clipboard.writeText(text02) ;
 }
-function abspath2(path2) {
-    return new URL( path2 , window.location.href ).href;
+function abspath2(path05) {
+    return new URL( path05 , window.location.href ).href;
 }
-function copypath2clipboard(text3) {
-    copy2clipboard( abspath2(text3) )
+function copypath2clipboard(text3,h03) {
+    var fullpath03 = abspath2(text3) ; 
+    var warn03 =  "以下内容已经复制到粘贴板 : \n" + fullpath03 + "\n" + h03;  
+    copy2clipboard( fullpath03 , warn03) ;
 }
-function gotopath4(goto4) {
-    window.setTimeout(function(){window.top.location=abspath2(goto4)} , 1000);
+function gotopath4(goto04) {
+    window.setTimeout(function(){window.top.location=abspath2(goto04)} , 1000);
 }
 
 </script>
