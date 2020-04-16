@@ -30,30 +30,30 @@ gitX:
 
 up:
 	pwd
-	nice -n 19 git push -u origin master
+	nice -n 17 git push -u origin master
 e:
 	vim Makefile.env
 m:
 	vim Makefile
 gs:
-	nice -n 19 git status
+	nice -n 17 git status
 gc:
-	nice -n 19 git commit -a
+	nice -n 17 git commit -a
 
 gcXmmm:=$(shell (LC_ALL=C date +"%Y%m%d_%H%M%p" ; cat /etc/timezone )|tr "/\r\n-" _)
 gcX:
-	nice -n 19 git commit -m $(gcXmmm)
+	nice -n 17 git commit -m $(gcXmmm)
 	
 
 gd :
-	nice -n 19 git diff
+	nice -n 17 git diff
 
 ga :
-	nice -n 19 git add .
+	nice -n 17 git add .
 rp:
-	@echo nice -n 19 git repack -a -d --window-memory 10m --max-pack-size 20m
-	nice -n 19 git config pack.windowMemory 10m
-	nice -n 19 git config pack.packSizeLimit 20m
+	@echo nice -n 17 git repack -a -d --window-memory 10m --max-pack-size 20m
+	nice -n 17 git config pack.windowMemory 10m
+	nice -n 17 git config pack.packSizeLimit 20m
 
 
 
@@ -74,6 +74,7 @@ define help_textHU
 	v2   -> vim test file 02 for hugo
 	v3   -> vim test file 03 for hugo
 	m3u  -> gen the m3u
+	wav  -> deal with 22.wav
 
 endef
 
@@ -129,14 +130,14 @@ updateMakefile :=  [ ! -f scripts.Hugo/Makefile -o ! -f scripts.Hugo/themes/Make
 
 rgt:regenTestVersion
 regenTestVersion: regenBaseCheck
-	cd scripts.Hugo/ && nice -n 19 hugo.testing         && hugo.testing version
+	cd scripts.Hugo/ && nice -n 17 hugo.testing         && hugo.testing version
 	$(rmXML)
 	$(updateMakefile)
 
 
 rgp : regen_pure 
 regen_pure : regenBaseCheck
-	cd scripts.Hugo/ && nice -n 19 hugo       && hugo version
+	cd scripts.Hugo/ && nice -n 17 hugo       && hugo version
 	$(rmXML)
 	$(updateMakefile)
 
@@ -144,12 +145,12 @@ um update_makefile :
 	(cd scripts.Hugo/themes/ && git pull  && cat Makefile > ../Makefile )
 
 rg:regen
-regen: m3u sed01 regen_pure
+regen: wav m3u sed01 regen_pure
 
 s : server
 server:
 	@[ -f scripts.Hugo/config.toml ] || ( echo "why_no_41 file <scripts.Hugo/config.toml> exist ?" ; exit 41 )
-	cd scripts.Hugo/ && nice -n 19 hugo server --disableFastRender
+	cd scripts.Hugo/ && nice -n 17 hugo server --disableFastRender
 
 # hddps://themes.gohugo.io/
 # hddps://gohugo.io/themes/
@@ -187,6 +188,20 @@ m3u  :
 #	m3u8_gen_01.sh https://`cat CNAME`/blog     scripts.Hugo/content/hot/endothers/all.m3u8   scripts.Hugo/content/blog
 	m3u8_gen_01.sh https://`cat CNAME`/blog     scripts.Hugo/content/all.m3u8                 scripts.Hugo/content/blog
 
+wav:
+	wav_gen_22_wav_list.sh    https://`cat CNAME`/blog     scripts.Hugo/content/all.m3u8      scripts.Hugo/content/blog
+	[ $$(find content/ -name 22.wav |wc -l) -eq 0 ] \
+		&& echo "22.wav check ok" \
+		|| ( echo \
+		&& ls -l `find content/ -name 22.wav` \
+		&& echo \
+		&& echo "check why does 22.wav exist ?" \
+		&& echo "nice -n 19 ffmpeg -i " \
+		&& echo "                        -vn -ac 1  22.wav" \
+		&& echo \
+		&& exit 78 \
+		)
+
 export help_textHU
 endif
 ############################################### UseHugoOnTop  end
@@ -199,7 +214,7 @@ endif
 ifdef    UseHugoUnderScript
 $(info using    UseHugoUnderScript )
 
-rg rgt regen     s2 server2     s3 server3     s5 server5     s server m3u rgX gcX v1 v2 v3 :
+rg rgt regen     s2 server2     s3 server3     s5 server5     s server m3u wav rgX gcX v1 v2 v3 :
 	cd .. && make $@
 
 
@@ -251,6 +266,8 @@ $(eval $(foreach aa1,$(myCodehtml_list01),$(call myCodeTP01,$(aa1))))
 
 gus:  git_up_dusum 
 gusX: git_up_dusumX
+gusXt: git_up_dusumX
+	make -C scripts.Hugo/themes/    gusX 
 git_up_dusum  : ga gc  up 
 	du -sh .git 
 	pwd
